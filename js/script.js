@@ -25,11 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ================================================
        LOGICA TARIFFE STAGIONALI
-       Bassa stagione  : €35/persona/notte  (gen-apr, ott-dic)
-       Media stagione  : €50/persona/notte  (mag, giu, set)
-       Alta stagione   : €80/persona/notte  (lug, ago)
+       Bassa stagione  : €42/persona/notte  (gen-apr, ott-dic)
+       Media stagione  : €60/persona/notte  (mag, giu, set)
+       Alta stagione   : €95/persona/notte  (lug, ago)
        Bambini         : stessa tariffa adulti (NESSUNO sconto)
        Animali         : supplemento fisso €100 (una tantum)
+       Soggiorno minimo: 7 notti
        ================================================ */
     function calcolaTariffa() {
         const checkinVal = document.getElementById('checkin').value;
@@ -69,16 +70,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const diffTime = Math.abs(dataOut - dataIn);
         const notti = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (notti < 7) {
+            risBox.classList.add('d-none');
+            errBox.classList.remove('d-none');
+            errBox.textContent = 'Il soggiorno minimo è di 7 notti. Seleziona un periodo più lungo.';
+            return null;
+        }
+
         const mese = dataIn.getMonth(); // 0=gen, 6=lug, 7=ago
 
-        let tariffaPersonaNotte = 35;
+        let tariffaPersonaNotte = 42;
         let nomeStagione = 'Bassa Stagione';
 
         if (mese === 4 || mese === 5 || mese === 8) { // mag, giu, set
-            tariffaPersonaNotte = 50;
+            tariffaPersonaNotte = 60;
             nomeStagione = 'Media Stagione';
         } else if (mese === 6 || mese === 7) { // lug, ago
-            tariffaPersonaNotte = 80;
+            tariffaPersonaNotte = 95;
             nomeStagione = 'Alta Stagione';
         }
 
