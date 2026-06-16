@@ -41,10 +41,6 @@
                     <a href="#richiesta" class="btn-gold">Richiedi Disponibilità</a>
                     <a href="#servizi" class="btn-ghost">Scopri la Villa</a>
                 </div>
-                <div class="hero-trust mt-4">
-                    <span><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></span>
-                    <span class="hero-trust-text">5.0 · Ospiti soddisfatti ogni stagione</span>
-                </div>
             </div>
         </div>
     </section>
@@ -53,9 +49,10 @@
     <section class="py-5 bg-white">
         <div class="container text-center py-4">
             <h2 class="section-title mb-3">OMBRA & CAFFÈ</h2>
-            <div class="mb-4 text-warning">
+            <div class="mb-2 text-warning">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
+            <p class="text-muted small mb-4">5.0 · Ospiti soddisfatti ogni stagione</p>
             <p class="lead text-muted px-lg-5 mx-auto" style="max-width:850px;">
                 Una villetta indipendente a soli <strong>80 metri dalla spiaggia</strong>, famosa per il suo incredibile spazio all'aperto. Goditi la grande piscina privata con vista panoramica sull'<strong>Etna</strong>, l'area barbecue e la massima tranquillità, a breve distanza da <strong>Taormina</strong>. ☀️
             </p>
@@ -244,7 +241,7 @@
             <form id="bookingForm" class="booking-card mx-auto" style="max-width:700px;" action="https://api.web3forms.com/submit" method="POST">
 
                 <!-- CONFIGURAZIONE WEB3FORMS -->
-                <input type="hidden" name="access_key" value="8a60b6bf-a972-461e-a8af-70504431ed6b">
+                <input type="hidden" name="access_key" value="LA_TUA_ACCESS_KEY_QUI">
                 <input type="hidden" name="subject" value="Nuova Richiesta di Disponibilità - Ombra & Caffè">
                 <input type="hidden" name="from_name" value="Sito Ombra & Caffè">
                 <!-- Honeypot anti-spam: campo invisibile, deve restare vuoto -->
@@ -254,6 +251,7 @@
                 <div class="booking-step-label">
                     <span class="step-number">1</span> Calcola il Preventivo
                 </div>
+                <p class="small mb-3" style="color: rgba(255,255,255,0.45);"><i class="fas fa-info-circle me-1"></i> Soggiorno minimo: 7 notti</p>
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label class="form-label-dark">Data Check-in</label>
