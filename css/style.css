@@ -591,3 +591,16 @@ body {
     .perk-card { padding: 24px 16px; }
     .feature-pill { font-size: 0.82rem; padding: 7px 12px; }
 }
+/* ================================================
+   OSPITI COUNTER INFO
+   ================================================ */
+.ospiti-counter-info {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    color: #a0c4a0;
+    min-height: 42px;
+    transition: all 0.3s ease;
+}
