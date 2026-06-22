@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <!-- NAVBAR -->
     <header class="main-header">
         <div class="nav-container">
-            <div class="logo"><a href="index.html">Ombra & Caffè ☕</a></div>
+            <div class="logo"><a href="index.html" translate="no">Ombra &amp; Caffè ☕</a></div>
             <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -48,7 +48,7 @@
     <!-- BRAND INTRO -->
     <section class="py-5 bg-white">
         <div class="container text-center py-4">
-            <h2 class="section-title mb-3">OMBRA & CAFFÈ</h2>
+            <h2 class="section-title mb-3" translate="no">OMBRA &amp; CAFFÈ</h2>
             <div class="mb-2 text-warning">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -254,43 +254,64 @@
                 <p class="small mb-3" style="color: rgba(255,255,255,0.45);"><i class="fas fa-info-circle me-1"></i> Soggiorno minimo: 7 notti</p>
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label class="form-label-dark">Data Check-in</label>
+                        <label class="form-label-dark">📅 Data Check-in</label>
                         <input type="date" id="checkin" name="checkin" class="form-control form-dark" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label-dark">Data Check-out</label>
+                        <label class="form-label-dark">📅 Data Check-out</label>
                         <input type="date" id="checkout" name="checkout" class="form-control form-dark" required>
                     </div>
-                    <div class="col-md-4">
-                        <label class="form-label-dark">Adulti</label>
+                    <div class="col-md-3 col-6">
+                        <label class="form-label-dark">👤 Adulti <span style="color:rgba(255,255,255,0.45);font-size:0.75rem;">(12+ anni)</span></label>
                         <select id="adulti" name="adulti" class="form-select form-dark">
-                            <option value="1">1 Adulto</option>
-                            <option value="2" selected>2 Adulti</option>
-                            <option value="3">3 Adulti</option>
-                            <option value="4">4 Adulti</option>
-                            <option value="5">5 Adulti</option>
-                            <option value="6">6 Adulti</option>
-                            <option value="8">8 Adulti</option>
-                            <option value="10">10 Adulti</option>
-                            <option value="12">12 Adulti</option>
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
                         </select>
                     </div>
-                    <div class="col-md-4">
-                        <label class="form-label-dark">Bambini</label>
+                    <div class="col-md-3 col-6">
+                        <label class="form-label-dark">🧒 Bambini <span style="color:rgba(255,255,255,0.45);font-size:0.75rem;">(2–11 anni)</span></label>
                         <select id="bambini" name="bambini" class="form-select form-dark">
-                            <option value="0" selected>Nessuno</option>
-                            <option value="1">1 Bambino</option>
-                            <option value="2">2 Bambini</option>
-                            <option value="3">3 Bambini</option>
-                            <option value="4">4 Bambini</option>
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
                         </select>
                     </div>
-                    <div class="col-md-4">
-                        <label class="form-label-dark">Animali Domestici</label>
+                    <div class="col-md-3 col-6">
+                        <label class="form-label-dark">👶 Neonati <span style="color:#a0c4a0;font-size:0.75rem;">(&lt;2 anni · gratis!)</span></label>
+                        <select id="bambini-gratis" name="bambini_sotto_2anni" class="form-select form-dark">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <label class="form-label-dark">🐾 Animali</label>
                         <select id="animali" name="animali" class="form-select form-dark">
                             <option value="no" selected>No</option>
                             <option value="si">Sì (+€100)</option>
                         </select>
+                    </div>
+                    <div class="col-12">
+                        <div id="ospiti-counter" class="ospiti-counter-info"></div>
+                        <p class="small mb-0" style="color:rgba(255,255,255,0.4);margin-top:6px;">ℹ️ Tariffa base per 1–4 persone · Ogni persona in più: +€20/notte · Max 12 ospiti (esclusi neonati &lt;2 anni)</p>
                     </div>
                 </div>
 
@@ -371,7 +392,7 @@
         <div class="container footer-grid">
             <div class="row g-4">
                 <div class="col-lg-4 footer-brand text-start">
-                    <h4>Ombra & Caffè ☕</h4>
+                    <h4 translate="no">Ombra &amp; Caffè ☕</h4>
                     <p class="text-white-50">La tua oasi di relax tra l'Etna e il mar di Sicilia.</p>
                 </div>
                 <div class="col-lg-4 text-start">
